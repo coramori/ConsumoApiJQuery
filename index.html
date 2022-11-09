@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Miaupédia</title>
+    <title>Miaupédia | Home</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -54,11 +54,10 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link scroll" href="cards.html"
+              <a class="nav-link" href="cards.html"
                 >Raças</a
               >
-            </li>    
-            
+            </li>
           </ul>
         </div>
       </div>
@@ -70,73 +69,23 @@
       data-bs-ride="carousel"
     >
       <div class="carousel-inner highlight-pics">
-        <div class="carousel-item">
-          <img
-            src="img/persa.jpeg"
-            class="d-flex w-100"
-            alt="Foto de um gato persa"
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="img/ragdoll.jpeg"
-            class="d-flex w-100"
-            alt="Foto de um gato ragdoll"
-          />
-        </div>
-        <div class="carousel-item active">
-          <img
-            src="img/sphynx.jpeg"
-            class="d-flex w-100"
-            alt="Foto de um gato sphynx"
-          />
-        </div>
-      </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleFade"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleFade"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+        
+        <div class="results">
+          <div id="cat_result" class="result">
+              <!--<p>Clique Gato</p>-->
+          </div>
+      </div>      
     </div>
-
+    </div>
     <!-- Main -->
     <main>
       <h3 id="main-title">Sobre o Site</h3>
-
-<p>Os gatos foram domesticados por cerca de 10.000 anos. Os primeiros gatinhos seguiram comunidades humanas para aproveitar a população de roedores que gostava de lanchar no lixo comunitário das cidades.</p>
-<p>Hoje em dia, em 91 países ao redor do mundo, os gatos de estimação superam em número seus primos caninos.</p>
-<p>Todos os gatinhos são especiais, mas não são todos iguais!</p>
-<p>Diferentes raças trazem suas próprias características distintas para suas famílias humanas. A Miaupédia fornece um vislumbre do melhor de algumas das raças de gatos mais populares do mundo.</p>
-<p>Saiba mais sobre seu gatinho ou descubra qual gato pode ser o ideal para sua família.</p>
-          
+      <p>Todos os gatinhos são especiais, mas não são todos iguais!</p>
+      <p>Diferentes raças trazem suas próprias características distintas para suas famílias humanas. A Miaupédia fornece um vislumbre do melhor de algumas das raças de gatos mais populares do mundo.</p>
+      <p>Saiba mais sobre seu gatinho ou descubra qual gato pode ser o ideal para sua família.</p>
     </main>
-    <!-- JQuery -->
-    <script
-      src="https://code.jquery.com/jquery-3.6.1.min.js"
-      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-      crossorigin="anonymous"
-    ></script>
-    <!-- Bootstrap -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-      crossorigin="anonymous"
-    ></script>
     <!-- Scripts -->
     <script src="main.js"></script>
-    <script src="pedidos.js"></script>
+    <script src="api.js"></script>
   </body>
 </html>

@@ -28,7 +28,7 @@ header {
 #subtitle {
   font-weight: normal;
   text-align: center;
-  font-size: 1.9rem;
+  font-size: 1.6rem;
   font-weight: 400;
   text-shadow: 1px 1px #ffffff;
 }
@@ -41,23 +41,6 @@ header {
 #nav-link {
   background-color: rgb(233, 233, 233) !important;
   color: black;
-}
-
-.carousel {
-  width: 900px;
-  margin: auto;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  margin-top: 50px;
-}
-
-.highlight-pics img {
-  width: auto;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 4px 2px 8px #a1a1a1;
-  margin: 20px 0;
 }
 
 #main-title {
@@ -77,11 +60,45 @@ header {
   margin-bottom: 5rem;
 }
 
+main {
+  margin-bottom: 3rem;
+}
+
 p {
-  width: 900px;
+  width: 600px;
   margin: auto;
-  text-align: justify;
-  display: flex;
+  text-align: center;
   margin-top: 40px;
   margin-bottom: 5rem;
+}
+
+.results {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.result {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  height: 400px;
+  width: 600px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 4px 2px 8px #a1a1a1;
+}
+
+.result img {
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
