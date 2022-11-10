@@ -1,0 +1,23 @@
+.details-picture img {
+  width: 35rem;
+  box-shadow: 4px 2px 8px #cfcfcf;
+  border-radius: 10px;
+  margin-top: 3rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.details-title h3 {
+  margin: 2rem 0 1rem;
+  font-weight: bold;
+  text-shadow: 2px 2px #bbbbbb;
+}
+
+.details-desc p {
+  width: 35rem;
+}

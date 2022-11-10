@@ -34,8 +34,10 @@ const getCat = () => {
       $(img).attr('src', localStorage.getItem('img'));
       $(title).text(data.name);
       $(description).text(data.description);
-      $(infos).text(
-        `temperament, ${data.temperament} \norigin, ${data.origin} \nlife_span, ${data.life_span}`
+      $(infos).html(
+        `<p>Temperament: ${data.temperament}</p>
+        <p>Origin country: ${data.origin}</p>
+        <p>Life span: ${data.life_span} years</p>`
       );
 
       $(containerImg).append(img);

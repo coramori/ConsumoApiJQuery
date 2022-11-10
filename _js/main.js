@@ -1,5 +1,4 @@
-/* # Confs */
-const URL_API = 'https://api.thecatapi.com/v1/breeds/?offset=50&limit=6';
+const URL_API = 'https://api.thecatapi.com/v1/breeds/';
 
 $(document).ready(() => {
   getPagina('home.html', 'main');
@@ -7,9 +6,6 @@ $(document).ready(() => {
 
 var listGatos = new Array();
 
-const getCatList = (offset = null, limit = null) => {};
-
-// URL: https://api.thecatapi.com/v1/breeds
 const getCat = () => {
   getPagina('getCat.html', 'main');
   $.ajax({
@@ -17,42 +13,30 @@ const getCat = () => {
     dataType: 'json',
     success: (data) => {
       let listCat = document.createElement('div');
-      $(listCat).addClass('linha');
+      $(listCat).addClass('cats');
       $('#getCat').html(listCat);
       console.log(data);
       data.forEach((p, i) => {
-        // Início Card
-
         let li = document.createElement('div');
         let card = document.createElement('div');
         let cardHeader = document.createElement('div');
         let cardBody = document.createElement('div');
-        let cardFooter = document.createElement('div');
-        let img = document.createElement('img');
         let a = document.createElement('a');
 
-        $(img).attr('src', p.image.url);
         $(a).attr('href', 'details.html');
         $(a).attr('onClick', `save("${p.id}", "${p.image.url}");`);
-        $(li).addClass('listinha');
-        $(card).addClass('cartaozinho');
-        $(cardHeader).addClass('card-cabecinha');
-        $(cardBody).addClass('card-corpinho');
-        $(cardFooter).addClass('card-pezinho');
+        $(li).addClass('container-list');
+        $(card).addClass('container');
+        $(cardHeader).addClass('container-head');
+        $(cardBody).addClass('container-body');
+        $(cardBody).attr('style', `background-image: url("${p.image.url}")`);
 
-        // Fim do Card
-
-        // Buscando dados API
         $(cardHeader).html(`<h2>${p.name}</h2>`);
 
         console.log(p.id);
 
-        $(cardFooter).html(`<p>${p.description}</p>`);
-
-        // Adicionando cards na página
-        $(a).append(img);
         $(cardBody).append(a);
-        $(card).append(cardHeader).append(cardBody).append(cardFooter);
+        $(card).append(cardHeader).append(cardBody);
         $(li).append(card);
         $(listCat).append(li);
 
