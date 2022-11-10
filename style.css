@@ -97,9 +97,3 @@ p {
   max-width: 100%;
   min-width: 100%;
 }
-
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
