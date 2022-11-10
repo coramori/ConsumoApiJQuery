@@ -1,4 +1,4 @@
-//Destaque index.html
+// Highlight index.html
 setTimeout(getRandomCat, 1);
 setInterval(getRandomCat, 3000);
 
@@ -10,9 +10,8 @@ function getRandomCat() {
     });
 }
 
-//API cards.html
+// API cards.html
 const URL_API = 'https://api.thecatapi.com/v1/breeds/';
-
 
 $(document).ready(() => {
   getPagina('getCards.html', 'main');

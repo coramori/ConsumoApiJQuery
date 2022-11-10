@@ -1,4 +1,4 @@
-/* # Confs */
+// Confs
 let URL_API = 'https://api.thecatapi.com/v1/breeds/';
 
 $(document).ready(() => {
@@ -7,7 +7,6 @@ $(document).ready(() => {
   getCat();
 });
 
-// URL: https://api.thecatapi.com/v1/breeds
 const getCat = () => {
   $.ajax({
     url: URL_API,
