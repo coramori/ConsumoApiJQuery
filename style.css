@@ -74,6 +74,7 @@ p {
 }
 
 .results {
+<<<<<<< HEAD
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,3 +104,31 @@ p {
   align-items: center;
   justify-content: center;
 }
+=======
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.result {
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 10px;
+	height: 400px;
+	width: 1000px;
+}
+
+.result img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+>>>>>>> 7e5307673d6895f9b1f4ac5706acaf343a837193
