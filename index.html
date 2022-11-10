@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miaupedia | Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <figure class="logo">
+        <img
+          src="img/paw.png"
+          style="width: 100px; height: 100px; margin-right: 10px;"
+          alt="Logo Top"
+        />
+      </figure>
+      <div class="header-title">
+        <h1 id="title">Miaupedia</h1>
+        <h2 id="subtitle">Cat Encyclopedia</h2>
+      </div>
+    </header>
+    <!-- Navbar -->
+    <nav
+      class="navbar"
+      style="background-color: rgb(128, 192, 228)"
+    >
+      <div class="container-fluid justify-content-center">
+          <ul
+            id="nav-pills"
+            class="nav nav-pills mb-2 mb-lg-0 justify-content-center"
+          >
+            <li class="nav-item">
+              <a
+                id="nav-link"
+                class="nav-link active"
+                aria-current="page"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cards.html"
+                >Breeds</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Highlight -->
+    <div
+      id="carouselExampleFade"
+      class="carousel slide carousel-fade"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner highlight-pics">
+        
+        <div class="results">
+          <div id="cat_result" class="result">
+        </div>
+      </div>      
+    </div>
+    </div>
+    <!-- Main -->
+    <main>
+      <h3 id="main-title">About Miaupedia</h3>
+      <p>All cats are special, but they are not the same!</p>
+      <p>Different breeds have their own benefits for their human families.</p>
+      <p>With Meaupedia you can learn more about your kitty or find out which cat might be right for your family!</p>
+    </main>
+    <!-- Scripts -->
+    <script src="./_js/main.js"></script>
+  </body>
+</html>
