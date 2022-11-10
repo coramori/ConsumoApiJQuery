@@ -1,20 +1,33 @@
+//Destaque index.html
+setTimeout(getRandomCat, 1);
+setInterval(getRandomCat, 3000);
+
+function getRandomCat() {
+  fetch('https://aws.random.cat/meow')
+    .then((res) => res.json())
+    .then((data) => {
+      cat_result.innerHTML = `<img src=${data.file} alt="cat" />`;
+    });
+}
+
+//API cards.html
 const URL_API = 'https://api.thecatapi.com/v1/breeds/';
 
+
 $(document).ready(() => {
-  getPagina('home.html', 'main');
+  getPagina('getCards.html', 'main');
 });
 
 var listGatos = new Array();
-
+getPagina('cards.html', 'main');
 const getCat = () => {
-  getPagina('getCat.html', 'main');
   $.ajax({
     url: URL_API,
     dataType: 'json',
     success: (data) => {
       let listCat = document.createElement('div');
       $(listCat).addClass('cats');
-      $('#getCat').html(listCat);
+      $('#cardsgatos').html(listCat);
       console.log(data);
       data.forEach((p, i) => {
         let li = document.createElement('div');
