@@ -1,5 +1,5 @@
 /* # Confs */
-const URL_API = 'https://api.thecatapi.com/v1/breeds/?offset=5&limit=5';
+const URL_API = 'https://api.thecatapi.com/v1/breeds/?offset=50&limit=6';
 
 $(document).ready(() => {
   getPagina('home.html', 'main');
@@ -17,29 +17,42 @@ const getCat = () => {
     dataType: 'json',
     success: (data) => {
       let listCat = document.createElement('div');
-      $(listCat).addClass('row');
+      $(listCat).addClass('linha');
       $('#getCat').html(listCat);
       console.log(data);
-      data.forEach((p) => {
+      data.forEach((p, i) => {
         // Início Card
+
         let li = document.createElement('div');
         let card = document.createElement('div');
         let cardHeader = document.createElement('div');
         let cardBody = document.createElement('div');
+        let cardFooter = document.createElement('div');
+        let img = document.createElement('img');
+        let a = document.createElement('a');
 
-        $(li).addClass('col-4');
-
-        $(card).addClass('card');
-        $(cardHeader).addClass('card-header');
-        $(cardBody).addClass('card-body');
+        $(img).attr('src', p.image.url);
+        $(a).attr('href', 'details.html');
+        $(a).attr('onClick', `save("${p.id}", "${p.image.url}");`);
+        $(li).addClass('listinha');
+        $(card).addClass('cartaozinho');
+        $(cardHeader).addClass('card-cabecinha');
+        $(cardBody).addClass('card-corpinho');
+        $(cardFooter).addClass('card-pezinho');
 
         // Fim do Card
 
-        $(cardHeader).html(`<h1>${p.name}</h1>`);
+        // Buscando dados API
+        $(cardHeader).html(`<h2>${p.name}</h2>`);
 
-        $(cardBody).html(`<img src="${p.image.url}" width: 256px />`);
+        console.log(p.id);
 
-        $(card).append(cardHeader).append(cardBody);
+        $(cardFooter).html(`<p>${p.description}</p>`);
+
+        // Adicionando cards na página
+        $(a).append(img);
+        $(cardBody).append(a);
+        $(card).append(cardHeader).append(cardBody).append(cardFooter);
         $(li).append(card);
         $(listCat).append(li);
 
@@ -47,4 +60,9 @@ const getCat = () => {
       });
     },
   });
+};
+
+const save = (id, img) => {
+  localStorage.setItem('name', id);
+  localStorage.setItem('img', img);
 };

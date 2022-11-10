@@ -1,0 +1,33 @@
+.card-corpinho img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.card-corpinho {
+  width: 30rem;
+  height: 30rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.cartaozinho {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 1rem;
+  border-radius: 10px;
+}
+
+.card-cabecinha h2 {
+  text-align: center;
+}
+
+.card-pezinho p {
+  padding-top: 10px;
+}
+
+.linha {
+  display: flex;
+  flex-wrap: wrap;
+}
