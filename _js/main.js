@@ -14,11 +14,10 @@ function getRandomCat() {
 const URL_API = 'https://api.thecatapi.com/v1/breeds/';
 
 $(document).ready(() => {
-  getPagina('getCards.html', 'main');
+  getCat();
 });
 
 var listGatos = new Array();
-getPagina('cards.html', 'main');
 const getCat = () => {
   $.ajax({
     url: URL_API,
@@ -26,8 +25,7 @@ const getCat = () => {
     success: (data) => {
       let listCat = document.createElement('div');
       $(listCat).addClass('cats');
-      $('#cardsgatos').html(listCat);
-      console.log(data);
+      $('#cats').html(listCat);
       data.forEach((p, i) => {
         let li = document.createElement('div');
         let card = document.createElement('div');
@@ -44,8 +42,6 @@ const getCat = () => {
         $(cardBody).attr('style', `background-image: url("${p.image.url}")`);
 
         $(cardHeader).html(`<h2>${p.name}</h2>`);
-
-        console.log(p.id);
 
         $(cardBody).append(a);
         $(card).append(cardHeader).append(cardBody);
